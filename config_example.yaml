@@ -1,0 +1,41 @@
+target_folder: "doc/sorted"
+default_folder: "docs/manual_sort"
+original_move_folder: "docs/originals"
+source_folder: "docs"
+split_pdf: True
+save_pattern: "%d_%k_%m"
+date_format: "%Y-%m-%d"
+
+folders:
+    Finanzen:
+        - kontoauszug
+        - abschlussrechnung
+        - kapitalausweis
+        - lohnabrechnung
+    Rechnungen:
+        - brack.ch
+        - amazon
+    Steuern:
+        - bundessteuer
+        - steuerrechnung
+        - steueramt
+        - steuerveranlagung
+        - finanzverwaltung
+    Schule:
+        - studienbestätigung
+        - diplom
+        - leistungsausweis
+        - notenausweis
+        - fähigkeitszeugnis
+        - zeugnis
+    Wohnung:
+        - wasser
+        - energie
+        - elektrizität
+        - kaution
+    Versicherung:
+        - hausrat
+        - privathaftpflicht
+    Arbeit:
+        - lohnausweis
+        - arbeitsvertrag

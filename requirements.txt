@@ -1,0 +1,6 @@
+PyPDF2
+nltk
+pyYAML
+# install tesseract and ocrmypdf with brew install ocrmypdf and brew install tesseract
+# ocrmypfd batch job for folder:
+# parallel --tag -j 2 ocrmypdf '{}' 'output/{}' ::: *.pdf
