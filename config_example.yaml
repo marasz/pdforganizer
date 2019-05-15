@@ -5,6 +5,7 @@ source_folder: "docs"
 split_pdf: True
 save_pattern: "%d_%k_%m"
 date_format: "%Y-%m-%d"
+print_paths: True
 
 folders:
     Finanzen:

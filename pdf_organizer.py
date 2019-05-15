@@ -22,6 +22,7 @@ default_folder = Path(config['default_folder'])
 original_move_folder = Path(config['original_move_folder'])
 folder_keywords = config['folders']
 split_pdf = config['split_pdf']
+print_paths = config['print_paths']
 
 
 #analyzer = TfidfVectorizer().build_analyzer()
@@ -119,14 +120,16 @@ def categorize_pdfs(directory):
                 if not os.path.exists(default_folder):
                     os.makedirs(default_folder)
                 os.rename(str(os.path.join(directory, file)), str(os.path.join(default_folder, file)))
-                print(str(os.path.join(default_folder, file)))
+                if print_paths:
+                    print(str(os.path.join(default_folder, file)))
             else:
                 keyword = sorted(keywords[sorted_ranking[0][0]],key=lambda kv: kv[1], reverse=True)[0][0]
                 if not os.path.exists(str(os.path.join(target_folder, sorted_ranking[0][0]))):
                     os.makedirs(str(os.path.join(target_folder, sorted_ranking[0][0])))
                 filename = create_filename(folder, keyword)
                 os.rename(str(os.path.join(directory, file)), str(os.path.join(target_folder, sorted_ranking[0][0],filename)))
-                print(str(os.path.join(target_folder, sorted_ranking[0][0],filename)))
+                if print_paths:
+                    print(str(os.path.join(target_folder, sorted_ranking[0][0],filename)))
 
 
 def create_filename(folder, key):
