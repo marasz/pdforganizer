@@ -1,12 +1,13 @@
-target_folder: "doc/sorted"
-default_folder: "docs/manual_sort"
-original_move_folder: "docs/originals"
-source_folder: "docs"
-split_pdf: True
-save_pattern: "%d_%k_%m"
+target_folder: "doc/sorted" #folder where processed pdfs are saved
+default_folder: "docs/manual_sort" # folder where not guessed pdfs are saved
+original_move_folder: "docs/originals" # folder where the original pdfs are moved
+source_folder: "docs" # pdfs in this folder will be processed
+split_pdf: True # splits pdf and process each page separately
+save_pattern: "%d_%k_%m" # %d: date, %k: key (name), %m: microsecond, %f: folder
 date_format: "%Y-%m-%d"
-print_paths: True
+print_paths: True # prints the path of processed pdfs to the console
 
+# define here the folder and the related key words
 folders:
     Finanzen:
         - kontoauszug
